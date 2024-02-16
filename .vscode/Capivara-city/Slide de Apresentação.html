@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="description" content=" Site para apresentação de uma cidade com capivaras ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide de Apresentação</title>
+  <style>
+
+    /*Página
+    --------*/
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1A252F 100%;
+    }
+
+
+    /*Cabeçalho
+    -----------*/
+
+    header {
+      background: linear-gradient(180deg, hsla(0, 0%, 26%, 0.550) 0%, hsla(0, 0%, 15%, 0.450) 50%, rgba(0, 0, 0, 0.350) 100%);
+      color: #80A2BF;
+      text-align: center;
+      padding: 0px;
+      transition-duration: 1.5s;
+      cursor: pointer;
+      margin-bottom: 25px;
+    }
+
+    header h1 {
+      font-size: 90px;
+      padding: 15px;
+      padding-bottom: 28px ;
+      margin: 0px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 2px hsl(0, 50%, 10%);
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+
+    /*Divs centrais
+    ---------------*/
+
+    .container {
+      height: 405vh;
+      width: 197.6vh;
+      flex-direction: column;
+    }
+
+    .caixa-com-img-l {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .caixa-com-img-r {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .texto {
+      text-align:left;
+      font-family: Arial, sans-serif;
+      display: inline-block;
+      margin: -5px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+
+    /*Border solid
+    --------------*/
+
+    .linhas-r {
+      border-left: 5px solid #c88d77;
+      transition-duration: 1.5s;
+      margin: -5px;
+      margin-left: 40px;
+      color: #c88d77;
+      margin-right: 30px;
+      padding-left: 10px;
+      transition-duration: 1.5s;
+      cursor: default;
+      text-shadow: 2px 2px 2px hsl(0, 50%, 10%);
+      font-size: 25px;
+    }
+
+    .linhas-l {
+      border-left: 5px solid #c88d77;
+      transition-duration: 1.5s;
+      margin: -5px;
+      margin-left: 40px;
+      color: #c88d77;
+      margin-right: 10px;
+      padding-left: 10px;
+      transition-duration: 1.5s;
+      cursor: default;
+      text-shadow: 2px 2px 2px hsl(0, 50%, 10%);
+      font-size: 25px;
+    }
+
+      .linhas-r:hover {
+        border-left: 5px solid #F2EEAE;
+        transition-duration: 1.5s;
+      }
+      
+      .linhas-l:hover {
+        border-left: 5px solid #F2EEAE;
+        transition-duration: 1.5s;
+      }
+
+
+    /*Texto do slide
+    ----------------*/
+    
+    .texto h2 {
+      color: #AED3F2;
+      padding-left: 12px;
+      border-left: 5px solid #AED3F2;
+      transition-duration: 1.5s;
+      cursor: default;
+      text-shadow: 2px 2px 2px hsl(0, 50%, 10%);
+      font-size: 30px;
+      margin-left: 40px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+    }
+
+    .linhas-r h3 {
+      color: #f07b54e7;
+      padding-left: 10px;
+      margin-right: 30px;
+      transition-duration: 1.5s;
+      cursor: default;
+      line-height: 28px;
+      text-shadow: 2px 2px 2px hsl(0, 50%, 10%);
+      font-size: 25px;
+
+    }
+
+    .linhas-l h3 {
+      color: #f07b54e7;
+      padding-left: 10px;
+      margin-right: 30px;
+      transition-duration: 1.5s;
+      cursor: default;
+      line-height: 28px;
+      text-shadow: 2px 2px 2px hsl(0, 50%, 10%);
+      font-size: 25px;
+      display: block;
+    }
+
+    .linhas-r p {
+      color: #c88d77;
+      padding-left: 10px;
+      margin-right: 30px;
+      transition-duration: 1.5s;
+      cursor: default;
+      line-height: 28px;
+      text-shadow: 2px 2px 2px hsl(0, 50%, 10%);
+      font-size: 25px;
+
+    }
+
+    .linhas-l p {
+      color: #c88d77;
+      padding-left: 10px;
+      margin-right: 30px;
+      transition-duration: 1.5s;
+      cursor: default;
+      line-height: 28px;
+      text-shadow: 2px 2px 2px hsl(0, 50%, 10%);
+      font-size: 25px;
+      display: block;
+    }
+
+      .linhas-r h3:hover {
+        color: #F2EEAE;
+        text-shadow: 2px 2px 2px hsl(0, 55%, 38%);
+        transition-duration: 1.5s;
+        cursor: default;
+      }
+
+      .linhas-l h3:hover {
+        color: #F2EEAE;
+        text-shadow: 2px 2px 2px hsl(0, 55%, 38%);
+        transition-duration: 1.5s;
+        cursor: default;
+      }
+      
+      .linhas-r p:hover {
+        color: #F2EEAE;
+        text-shadow: 2px 2px 2px hsl(0, 55%, 38%);
+        transition-duration: 1.5s;
+        cursor: default;
+      }
+
+      .linhas-l p:hover {
+        color: #F2EEAE;
+        text-shadow: 2px 2px 2px hsl(0, 55%, 38%);
+        transition-duration: 1.5s;
+        cursor: default;
+      }
+
+      .texto h2:hover {
+        color: #F2EEAE;
+        border-left: 5px solid #F2EEAE;
+        text-shadow: 2px 2px 2px hsl(0, 55%, 38%);
+        transition-duration: 1.5s;
+        cursor: default;
+      }
+
+    .recuo {
+       text-indent: 0.5em;
+    }
+
+    b {
+      font-size: 24px;
+    }
+
+    h3 #darker{
+      font-size: 26.5px;
+    }
+
+    h3 #darker{
+      font-size: 27.5px;
+    }
+
+    /*Imagem
+    ----------------*/
+
+    .capi-img-r {
+      padding-right: 35px;
+      display: flex;
+    }
+
+    .capi-img-l {
+      padding-left: 35px;
+      display: flex;
+    }
+
+    img {
+      height: 280px;
+      transition-duration: 0.5s;
+      border-radius: 15px;
+      border: solid hsla(0, 0%, 50%, 0.800) 3px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+
+      img:hover {
+        transition-duration: 0.5s;
+        border-radius: 15px;
+        border: solid #F2EEAE 3px;
+      }
+
+    /*Id de imagens
+    ---------------*/
+      
+      #img-localização {
+        height: 150px;
+      }
+
+      #img-moeda {
+        height: 180px;
+        border-radius: 100%;
+      }
+
+      #img-lazer {
+        height: 440px;
+      }
+
+      #img-curiosidade {
+        height: 200px;
+      }
+
+      #img-CCC {
+        height: 245px;
+      }
+
+      #img-economia {
+        height: 750px;
+      }
+      
+      #img-problemas {
+        height: 390px;
+      }
+
+      #img-desenvolvimento {
+        height: 450px;
+      }
+
+    /*Separador
+    -----------*/
+
+    hr {
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border: 0;
+      border-top: 1px ridge #FFCDCD;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    
+      #none {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        border: 0;
+        border-top: 1px ridge #ffcdcd00;
+        margin-left: 10px;
+        margin-right: 25px;
+      }
+
+    br {   
+      content: "A";
+      display: block;
+      margin-bottom: 0.2em;
+    }
+
+      #negativo-sub {
+        content: "A";
+        display: block;
+        margin-bottom: -0.41em;
+      }
+
+      #negativo-texto {
+        content: "A";
+        display: block;
+        margin-bottom: -0.65em;
+      }
+
+      #negativo-ponto {
+        content: "A";
+        display: block;
+        margin-bottom: -0.15em;
+      }
+
+
+    /*Scroll da página
+    ------------------*/
+
+    body::-webkit-scrollbar {
+      width: 12px;
+      background-color: #FFCDCD;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background-color: hsla(0, 0%, 35%, 0.916);
+    }
+
+  </style>
+
+  
+</head>
+
+<body>
+
+    <header>
+      <h1>Capivara City</h1>
+    </header>
+
+    <div class="container">
+
+      <div class="caixa-com-img-r">
+        <div class="texto">
+          <h2>Ponto turístico</h2>
+          <div class="linhas-r">
+            <p class="text-info recuo"> O principal ponto turístico da nossa cidade é o lago da Capivara, onde a mesma é
+              adorada de uma maneira constante, os moradores da cidade devem apreciar e respeitar a Capivara
+               constantemente, em toda quarta-feira as pessoas devem se ajoelhar e ficar ao menos 1 hora em adoração,
+                não devem trabalhar e nem estudar, seu tempo é totalmente voltado da Capivara. Caso isso n aconteça a
+                 Capivara mata seus adoradores de uma maneira cruel e dolorosa, são postos em um garfo de churrasco e
+                  levados a uma espécie de fornalha e assados ainda com vida. </p> <br id="negativo-texto">
+            <p class="text-info recuo">Porém, se seguirem a Capivara e tirar um tempo para sua adoração ela ficará 
+              contente e suas vidas serão preservadas e cuidadas, evitando problemas familiares e financeiros.</p>
+          </div>
+        </div>
+        <div class="capi-img-r">
+          <img src="./Slide de Apresentação_files/image-11.png" alt="Capivara">
+        </div>
+      </div>
+
+
+      <hr>
+
+
+      <div class="caixa-com-img-l">
+        <div class="capi-img-l">
+          <img id="img-moeda" src="./Slide de Apresentação_files/capybara.webp" alt="Capivara">
+        </div>
+        <div class="texto">
+          <h2>Moeda</h2>
+          <div class="linhas-l">
+            <p class="text-info recuo">A moeda de Capivara City é bem específica, onde a mesma leva o nome de 'Capy', 
+              funciona como o Real brasileiro, por exemplo 1,00 Capy equivale a 1,00 Real, sua única diferença é seu nome 
+              e sua importância já que é uma moeda de troca (variação do dólar), onde quer que você vá teremos essa moeda. 
+              É também considerada a texto do mundo ficando na frente até mesmo do dólar americano.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <hr>
+
+
+      <div class="caixa-com-img-r">
+        <div class="texto">
+          <h2>Localização</h2>
+          <div class="linhas-r">
+            <p class="text-info recuo"> A localização de Capivari onde está nossa cidade 'Capivara City' 
+              é no estado de São Paulo. Sua localização é mais perto do que você pensa, ficando apenas 1 hora 
+              de distância de Curitiba até a cidade.
+            </p>
+          </div>
+        </div>
+        <div class="capi-img-r">
+          <img id="img-localização" src="./Slide de Apresentação_files/representação-gps-no-celular.jpg" alt="Capivara">
+        </div>
+      </div>
+
+
+      <hr>
+
+      
+      <div class="caixa-com-img-l">
+        <div class="capi-img-l">
+          <img id="img-CCC" src="./Slide de Apresentação_files/e17f4854-f027-4ffe-ba56-42e64c88177d.webp" alt="Capivara">
+        </div>
+        <div class="texto">
+          <h2>Capivari / Capivara City</h2>
+          <div class="linhas-l">
+            <h3><b id="darker">População</b></h3><br id="negativo-sub">
+            <p class="text-info recuo"><b>• População</b> de Capivari: <b>56.379</b> (2020).</p> <br id="negativo-texto">
+            <p class="text-info recuo"><b>• População</b> de Capivara City: <b>45.987</b> (2023).</p>
+            
+            <hr id="none">
+
+            <h3><b id="darker">IDH</b></h3><br id="negativo-sub">
+            <p class="text-info recuo"><b>• IDH</b> de Capivari: <b>0,750</b> alto (2010).</p> <br id="negativo-texto">
+            <p class="text-info recuo"><b>• IDH</b> de Capivara City: <b>0,659</b> médio (2023).</p>
+          </div>
+        </div>
+      </div>
+
+
+      <hr>
+
+
+      <div class="caixa-com-img-r">
+        <div class="texto">
+          <h2>Lazer</h2>
+          <div class="linhas-r">
+            <h3><b id="darker">1.Os melhores pontos para se visitar em Capivari</b></h3><br id="negativo-sub">
+            <p class="text-info recuo">• Rodoviária de Capivari </p><br id="negativo-texto">
+            <p class="text-info recuo">• Arena Capivari </p><br id="negativo-texto">
+            <p class="text-info recuo">• Parque Ecológico Murilo Ferreira Carnicelli </p><br id="negativo-texto">
+            <p class="text-info recuo">• Pesqueiro Butinhão </p><br id="negativo-texto">
+            <p class="text-info recuo">• Igreja Matriz São João Batista </p><br id="negativo-texto">
+            <p class="text-info recuo">• Galeria Tarsila do Amaral.</p>
+
+              <hr id="none">
+
+            <h3><b id="darker">2. Os melhores pontos para se visitar em Capivara City</b></h3><br id="negativo-sub">
+            <p class="text-info recuo"> • Avenida das capivaras </p><br id="negativo-texto">
+            <p class="text-info recuo">• Espeto da capivara </p><br id="negativo-texto">
+            <p class="text-info recuo">• Lago da capivara </p> 
+          </div>
+        </div>
+        <div class="capi-img-r">
+          <img id="img-lazer" src="./Slide de Apresentação_files/Parque-Unipraias.jpg" alt="Capivara">
+        </div>
+      </div>
+
+
+      <hr>
+
+      
+      <div class="caixa-com-img-l">
+        <div class="capi-img-l">
+          <img id="img-curiosidade" src="./Slide de Apresentação_files/voce_sabia.png" alt="Capivara">
+        </div>
+        <div class="texto">
+          <h2>Curiosidade</h2>
+          <div class="linhas-l">
+            <p class="text-info recuo">Capivari, do Tupi-Guarani: Rio das Capivaras. O nome foi dado pelo fato de 
+              existirem muitas capivaras às margens do rio onde o povoado se formou. Mas, a partir de 20 de dezembro de 
+              1905, por meio da Lei n° 975, o município passou a ser denominado, oficialmente, como “Capivari”.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <hr>
+
+
+      <div class="caixa-com-img-r">
+        <div class="texto">
+          <h2>Os problemas urbanos</h2>
+          <div class="linhas-r">
+            <h3><b id="darker">1. Capivara City</b></h3><br id="negativo-sub">
+            <p class="text-info recuo"><b>• Segurança de baixo nível:</b> Falta de força policial organizada e aumento da criminalidade. </p><br id="negativo-texto">
+            <p class="text-info recuo"><b>• Saneamento Insuficiente:</b> Acúmulo de lixo nas ruas, levando a doenças.</p><br id="negativo-texto">
+            <p class="text-info recuo"><b>• Moradias de baixo nível:</b> Superlotação e construções improvisadas, aumentando riscos.</p>              
+            
+            <hr id="none">
+
+            <h3><b id="darker">2. Capivari</b></h3><br id="negativo-sub">
+            <p class="text-info recuo"><b>• Baixa exportação e importação:</b> é uma cidade de boa localização, mas falta incentivo comercial </p> <br id="negativo-texto">
+            <p class="text-info recuo"><b>• Acesso Limitado a Recursos:</b> Dependência de fontes externas para recursos essenciais.</p> <br id="negativo-texto">
+            <p class="text-info recuo"><b>• Falta de Espaço:</b> Limitações geográficas que dificultam o crescimento da cidade.</p> <br id="negativo-texto">
+
+          </div>
+        </div>
+        <div class="capi-img-r">
+          <img id="img-problemas" src="./Slide de Apresentação_files/noticia-problemas-urbanos.jpg" alt="Capivara">
+        </div>
+      </div>
+
+
+      <hr>
+
+      
+      <div class="caixa-com-img-l">
+        <div class="capi-img-l">
+          <img id="img-economia" src="./Slide de Apresentação_files/pexels-photo-3222685.jpeg" alt="Capivara">
+        </div>
+        <div class="texto">
+          <h2>Economia</h2>
+          <div class="linhas-l">
+            <h3><b id="darker">1. Capivara City</b></h3><br id="negativo-sub">
+            <p class="text-info recuo">A Capivara City depende principalmente desses três geradores de economia, que são 
+              a agricultura, produzindo os alimentos (grama, algas, grãos e melões), para sua cultura local, regiões 
+              próximas e para o comércio, já as oferendas religiosas que são oferecidas pelos religiosos da cidade ou 
+              de visitantes que acabam vindo para o local sagrado, e por último que é o comércio local que faz 
+              suas ofertas de produtos a vários locais do mundo e dentro da cidade, agora o valor que é 
+              produzido aproximadamente:</p><br id="negativo-ponto">
+              <p class="text-info recuo"><b>• Agricultura:</b> 37.300,00 Capys ao ano = R$ 37.300,00 ao ano. </p><br id="negativo-texto">
+              <p class="text-info recuo"><b>• Oferendas religiosas:</b> 14.800,00 Capys ao ano = R$ 14.800,00 ao ano. </p><br id="negativo-texto">
+              <p class="text-info recuo"><b>• Comércio:</b> 51.900,00 Capys ao ano = R$ 51.900,00 ao ano.</p>
+              
+              <hr id="none">
+
+              <h3><b id="darker">2. Capivari</b></h3><br id="negativo-sub">
+              <p class="text-info recuo">Capivari, SP, possui uma economia diversificada, com destaque para a 
+                agropecuária, indústria, comércio, serviços, transporte e educação. A cidade se beneficia de sua 
+                localização geográfica estratégica e contribui para a economia regional por meio de sua produção 
+                agrícola e industrial, bem como pelo fornecimento de serviços à população local.</p><br id="negativo-ponto">
+                <p class="text-info recuo"><b>• Agropecuária: </b> A agricultura é uma parte importante da economia local, com cultivos de cana-de-açúcar, milho, feijão, café e citros, juntamente com a criação de gado.</p> <br id="negativo-texto">
+                <p class="text-info recuo"><b>• Indústria:</b> Capivari abriga indústrias, incluindo a produção de açúcar e álcool, metalurgia, alimentos e produtos químicos. </p> <br id="negativo-texto">
+                <p class="text-info recuo"><b>• Comércio e serviços:</b> O comércio varejista e serviços desempenham um papel relevante na economia, oferecendo empregos e atendendo às necessidades da população local. </p> <br id="negativo-texto">
+                <p class="text-info recuo"><b>• Transporte e logística:</b> A cidade tem uma localização estratégica próxima a importantes rodovias e ferrovias, como a Rodovia Washington Luís (SP-310) e a linha férrea da Rumo Logística, impulsionando o setor de transporte e logística.</p> <br id="negativo-texto">
+                <p class="text-info recuo"><b>•  Educação:</b> A presença de instituições de ensino, como escolas e faculdades, também contribui para a economia, oferecendo oportunidades educacionais à comunidade local.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <hr>
+
+
+      <div class="caixa-com-img-r">
+        <div class="texto">
+          <h2>Desenvolvida, subdesenvolvida e emergente</h2>
+          <div class="linhas-r">
+            <h3><b id="darker">1. Capivara City - Emergente</b></h3><br id="negativo-sub">
+            <p class="text-info recuo"> Por que a cidade é emergente se tem uma boa economia, o motivo vem do alto gasto 
+              de eventos religiosos, culturais, turísticos e outros, com a compra de importações de produtos que não se 
+              tem na cidade, além disso a cidade tem um longo caminho para se tornar auto independente, sem ter que 
+              depender de serviços e produtos de outros,, mas com alto potencial de desenvolvimento e que ainda é uma 
+              cidade nova, tem um grande chance de se tornar uma das melhores cidades desenvolvidas, ainda é apenas uma 
+              questão de tempo para que vá acontecer.</p>
+              
+              <hr id="none">
+
+              <h3><b id="darker">2. Capivari - Subdesenvolvida</b></h3><br id="negativo-sub">
+              <p class="text-info recuo">Capivari, cidade do interior de São Paulo, enfrenta desafios comuns ao 
+                desenvolvimento, incluindo um IDH que busca melhoria, diversidade econômica, e a busca por 
+                aprimoramentos nos serviços públicos. A comunidade local tem dedicação na busca por um futuro melhor, 
+                mas ainda falta interesse do governo local colocar investimento para acabar com os problemas públicos 
+                que atrasam a cidade em seu desenvolvimento, entretanto ela ainda é um bom local para se morar mesmo 
+                com seus problemas internos.</p>  
+          </div>
+        </div>
+        <div class="capi-img-r">
+          <img id="img-desenvolvimento" src="./Slide de Apresentação_files/16271056_804.jpg" alt="Capivara">
+        </div>
+      </div>
+
+
+      <hr>
+
+
+
+</div></body></html>

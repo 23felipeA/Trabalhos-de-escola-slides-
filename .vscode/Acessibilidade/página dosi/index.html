@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Página 2</title>
+
+    <style>
+       
+       body.light-mode header {
+            background-color: rgb(218, 118, 60);
+            color: #E8E8E8;
+            text-align: center;
+        }
+        
+        body.light-mode main {
+            background-color: #E8E8E8;
+            border-left: 30px solid #E8E8E8; 
+            border-right: 30px solid #E8E8E8; 
+        }
+        
+        body.light-mode footer {
+            background-color: #303030;
+            color: #E8E8E8;
+        }
+        
+        body.dark-mode header {
+            background-color: #10190e;
+            color: #8E7A00;;
+        }
+        
+        body.dark-mode main {
+            background-color: #FFEB99;
+            border-left: 30px solid rgb(255, 235, 153);
+            border-right: 30px solid #FFEB99; 
+            color: #0d426e;
+        }
+        
+        body.dark-mode footer {
+            background-color: #0D0D0D; 
+            color: #8E7A00; 
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            font-size: 30px;
+            padding: 1px;
+        }
+
+        main {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        footer {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: larger;
+            text-align: center;
+            padding: 15px 0;
+            line-height: 25px;
+        }
+
+        body::-webkit-scrollbar {
+            width: 10px;
+            background-color: #E8E8E8;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: hsla(0, 0%, 35%, 0.918);
+            border-radius: 3.5px;
+        }
+
+        .sss {
+            position: relative;
+            display: inline-block;
+            right: 15px;
+            bottom: 55px;
+            width: 60px;
+            height: 34px;
+        }
+
+        .sss input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #f05353;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: #ffffff;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color:  #c9a974;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px  #c9a974;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .dark-mode-button {
+            display: none;
+        }
+
+        .light-mode-button {
+            display: none;
+        }
+
+        .switch-label {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .dark-mode-label {
+            color: #000000;
+        }
+        
+        .light-mode-label {
+            color: #ffffff;
+        }
+        
+        .recuo {
+            text-indent: 1em;
+        }
+
+        .texto {
+            display: block;
+        }
+
+        .local {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h2 {
+            font-size:xx-large;
+            margin-top: 20px;
+            margin-bottom: 12.5px;
+            border-left: 3px solid #303030;
+            padding-left: 8px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: rgb(0, 0, 0);
+        }
+
+        .div-i {
+          display: flex;
+          justify-content: center;
+        }
+
+        .img {
+          width: 600px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+    </style>
+
+    <script>
+
+        function toggleMode() {
+            var element = document.body;
+            var content = document.getElementById("DarkModetext");
+            element.classList.toggle("dark-mode");
+
+            var divImg = document.getElementById("div-img");
+            var divIm = document.getElementById("div-im");
+
+            // Verificar se a div "div-img" está visível
+            if (!divImg.classList.contains("hidden")) {
+                // Se estiver visível, esconda "div-img" e mostre "div-im"
+                divImg.classList.add("hidden");
+                divIm.classList.remove("hidden");
+            } else {
+                // Se não estiver visível, esconda "div-im" e mostre "div-img"
+                divIm.classList.add("hidden");
+                divImg.classList.remove("hidden");
+            }
+        }
+    </script>
+</head>
+
+<body class="light-mode">
+    <header>
+            <h1>As Cores</h1>
+    </header>
+
+    <main>
+        <article>
+            <div class="texto">
+
+                <div class="local">
+                    <h2>Daltonismo</h2>
+                    <label class="sss local">
+                        <input type="checkbox" id="modeSwitch" class="dark-mode-button" onclick="toggleMode()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <p class="recuo">Daltonismo é uma condição visual hereditária que afeta a capacidade de uma pessoa em 
+                  perceber certas cores. Essa condição ocorre devido a uma deficiência ou ausência de cones específicos 
+                  na retina, que são responsáveis por detectar as cores. A maioria dos casos de daltonismo é causada por 
+                  mutações genéticas que afetam a função dos cones, com uma prevalência maior em homens do que em 
+                  mulheres. Pode ser uma condição leve a grave, e suas manifestações variam de pessoa para pessoa.  </p>
+
+                <p class="recuo">Indivíduos com daltonismo frequentemente enfrentam desafios na diferenciação de cores, 
+                  especialmente entre tons de vermelho e verde. Isso pode afetar sua vida cotidiana, tornando tarefas 
+                  como identificar sinais de trânsito, selecionar roupas adequadas e até mesmo apreciar completamente 
+                  obras de arte e paisagens mais desafiadoras. A condição pode ser um obstáculo em carreiras que dependem 
+                  da percepção de cores, como design gráfico ou eletrônica. </p>
+
+                <p class="recuo">No entanto, a maioria das pessoas com daltonismo desenvolve mecanismos de adaptação, 
+                  como aprender a reconhecer padrões e tons em vez de confiar na distinção de cores. Além disso, a 
+                  tecnologia moderna, como aplicativos e óculos especiais, pode ajudar a melhorar a percepção das cores 
+                  para aqueles que sofrem com o daltonismo. Embora o daltonismo seja uma condição vitalícia, com 
+                  conscientização e apoio adequados, as pessoas afetadas podem levar vidas plenas e produtivas, 
+                  superando muitos dos desafios que a condição impõe. </p>
+                
+                <p class="recuo">O daltonismo é geralmente classificado em diferentes tipos, sendo o tipo mais comum a 
+                  dificuldade em distinguir entre vermelho e verde, conhecida como "deuteronopia". Além disso, existem 
+                  variações menos comuns que afetam a percepção de azul e amarelo. A identificação precoce do daltonismo 
+                  é importante, especialmente em crianças, para garantir que as adaptações apropriadas sejam feitas na 
+                  educação e na vida cotidiana. Profissionais de saúde visual podem realizar testes de visão de cores 
+                  para diagnosticar a condição e ajudar a pessoa a compreender como ela afeta sua percepção do mundo. </p>
+
+                  <div id="div-img" class="div-i div-img light-mode">
+                    <img class="img" src="https://escoladedados.org/wp-content/uploads/2021/08/daltonismo10.png" alt="Não sei">
+                  </div>
+                  <div id="div-im" class="div-i div-im dark-mode hidden">
+                    <img class="img" src="https://miro.medium.com/v2/resize:fit:1400/1*W4mKEPf_vWiXV6AU143Kvw.jpeg">
+                  </div>
+            </div>
+
+                <br>
+
+                <p ><strong>OBS:</strong> caso queira voltar para a primeira página, clicar na palavra: <a href="https://pagina-1-artes.netlify.app/"> Artes</a></p>  
+
+        </article>
+    </main>
+
+    <footer>
+        &copy; Felipe Trajano Horz<br>
+        2023<br>
+        felipetrajanofelipe@gmail.com
+    </footer>
+</body>
+</html>
